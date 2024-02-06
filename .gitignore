@@ -1,0 +1,11 @@
+/node_modules
+*.env
+.jshintrc
+/logs
+/test/**
+.vscode
+uploads
+Dockerfile-dev
+logs*
+.idea
+images
