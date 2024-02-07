@@ -24,7 +24,7 @@ export class BanxicoService {
     public static async getSeries(): Promise<BanxicoDataResponse> {
         const series = ['SF43936', 'SP30578', 'SF61745']; // Cetes, inflacion y tasa objetivo
         const initialDate = dayjs().subtract(10, 'year').format('YYYY-MM-DD');
-        const finalDate = dayjs().format('YYYY-MM-DD');
+        const finalDate = dayjs().add(1, 'month').format('YYYY-MM-DD');
 
         let response: AxiosResponse;
         const apiUrl = `https://www.banxico.org.mx/SieAPIRest/service/v1/series/${series.join(',')}/datos/${initialDate}/${finalDate}`;
